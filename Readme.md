@@ -6,7 +6,8 @@
 | 2020-10-12 | test head:test what have in head                                                      |
 | 2020-10-12 | tag:try to divide into diffent  usage                                                 |
 | 2020-10-12 | tag:content:                                                                          |
-|            | tag:text:                                                                             |
+| 2020-10-12 | tag:text:                                                                             |
+| 2020-10-13 | tag:inlinetext:                                                                       |
 |            | tag:and:                                                                              |
 |            | tag:demarcatingedits:                                                                 |
 |            | tag:deprecatedelements:                                                               |
@@ -14,7 +15,6 @@
 |            | tag:forms:                                                                            |
 |            | tag:Image:                                                                            |
 |            | tag:imageANDmultimedia:                                                               |
-|            | tag:inlinetext:                                                                       |
 |            | tag:interactivecontent:                                                               |
 |            | tag:script:                                                                           |
 |            | tag:tablecontent:                                                                     |

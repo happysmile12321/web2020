@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>tag:inlinetext</title>
+	<style type="text/css" media="screen">
+		kbd.key {
+			border-radius: 3px;
+			padding: 1px 2px 0;
+			border: 1px solid black;
+		}
+
+		hr {
+			border: 2px solid black;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>InlineText</h1>
+	</header>
+	<hr>
+	<main>
+		<nav>
+			<ul>
+				<li><a href="#a" target="_self">a</a></li>
+				<li><a href="#abbr" target="_self">abbr</a></li>
+				<li><a href="#b" target="_self">b</a></li>
+				<li><a href="#bdi" target="_self">bdi</a></li>
+				<li><a href="#bdo" target="_self">bdo</a></li>
+				<li><a href="#br" target="_self">br</a></li>
+				<li><a href="#cite" target="_self">cite</a></li>
+				<li><a href="#code" target="_self">code</a></li>
+				<li><a href="#dfn" target="_self">dfn</a></li>
+				<li><a href="#em" target="_self">em</a></li>
+				<li><a href="#i" target="_self">i</a></li>
+				<li><a href="#kbd" target="_self">kbd</a></li>
+				<li><a href="#mark" target="_self">mark</a></li>
+				<li><a href="#rp" target="_self">rp</a></li>
+				<li><a href="#rt" target="_self">rt</a></li>
+				<li><a href="#ruby" target="_self">ruby</a></li>
+				<li><a href="#s" target="_self">s</a></li>
+				<li><a href="#samp" target="_self">samp</a></li>
+				<li><a href="#small" target="_self">small</a></li>
+				<li><a href="#span" target="_self">span</a></li>
+				<li><a href="#strong" target="_self">strong</a></li>
+				<li><a href="#sub" target="_self">sub</a></li>
+				<li><a href="#sup" target="_self">sup</a></li>
+				<li><a href="#time" target="_self">time</a></li>
+				<li><a href="#u" target="_self">u</a></li>
+				<li><a href="#var" target="_self">var</a></li>
+				<li><a href="#wbr" target="_self">wbr</a></li>
+			</ul>
+		</nav>
+		<hr>
+		<a id="a" href="http://www.baidu.com" target="_blank">ToBaiduLink</a>
+		<hr>
+		The <abbr id="abbr" title="People's Republic of China">PRC</abbr> was founded in 1949.
+		<hr>
+		<b id="b">This is bold text</b>
+		<hr>
+		bdi(i--isolation) is usefull when you don't examcly know the <u><b>direction</b></u> of <b>text</b>.
+		<br></br>
+		such as :
+		<ul>
+			<li><span class="name">اَلأَعْشَى</span> - 1st place</li>
+			<li><span class="name">Jerry Cruncher</span> - 2nd place</li>
+		</ul>
+		But it should be this:
+		<pre>
+		اَلأَعْشَى  &nbsp; - 1st place
+                Jerry Cruncher - 2nd place
+		</pre>
+		so,the span tag change to the bdi.
+		<ul>
+			<li><bdi id="bdi" class="name">اَلأَعْشَى</bdi> - 1st place</li>
+			<li><bdi class="name">Jerry Cruncher</bdi> - 2nd place</li>
+		</ul>
+		Then,it correctly.
+		<hr>
+		<bdo dir="rtl">right to left</bdo>
+		<br></br>
+		<bdo id="bdo" dir="ltr">left to right</bdo>
+		<br></br>
+		<bdo dir="auto">auto</bdo>
+		<p>bdo can <u>control the direction of text.</u>.It must declaration the <b>dir attribute</b></p>
+		<hr>
+		<br id="br">br--new line</br>
+		<hr>
+		<blockquote>
+			<p>It was a bright cold day in April, and the clocks were striking thirteen.</p>
+			<footer>
+				First sentence in <cite id="cite"><a
+						href="http://www.george-orwell.org/1984/0.html">Nineteen
+						Eighty-Four</a></cite> by George Orwell (Part 1, Chapter 1).
+			</footer>
+		</blockquote>
+		<hr>
+		<pre>
+
+		<code id="code">
+package main
+
+import (
+	"github.com/jroimartin/gocui"
+	"log"
+)
+
+func main() {
+	//创建1个只有8种颜色的GUI对象
+	g, err := gocui.NewGui(gocui.OutputNormal)
+	//如果在构建gocui对象（其实构建的是termbox对象）
+	//失败，就返回err.
+	if err != nil {
+		//日志记录一下
+		log.Fatal(err)
+	}
+	//等待构建这个对象结束，拿到这个对象的指针后
+	//就释放构建这个对象所需要申请的资源
+	defer g.Close()
+	//一些键盘绑定、视图的设置
+	//设置视图管理函数，其实就是布局函数的名字。
+	g.SetManagerFunc()
+
+	//设置键盘绑定，不过要绑定多个.
+	//因为默认只能设置1个绑定，帮顶需要g对象，所以构造
+	//1个函数将g穿进去，统一进行注册管理键盘的绑定。
+	//注意，如果是“”则代表对全部视图进行绑定。
+	//否则，是对给定的视图的名字进行绑定。
+	//绑定会使主循环产生事件从而逃离阻塞,进行资源的更新。
+	if err := setkeybindings(g); err != nil {
+		log.Panic(err)
+	}
+
+	//如果主循环返回了错误，而且这个错误还不是
+	//正常退出程序这个错误,那么用日志记录一下
+	if err := g.MainLoop(); err != nil && err != gocui.ErrQuit {
+		log.Fatal(err)
+	}
+}
+
+//键盘绑定绑定的是视图，或者g对象。
+func setkeybindings(g *gocui.Gui) error {
+
+	//总体返回nil，这样,单独的哪个键盘绑定出现了问题就提醒哪个。
+	return nil
+}
+		</code>
+		</pre>
+		<hr>
+		<p><b>
+				<h2>dfn -- defination</h2>
+			</b></p>
+		<p>The <dfn id="dfn"><abbr title="Hubble Space Telescope">HST</abbr></dfn>
+			is among the most productive scientific instruments ever constructed.
+			It has been in orbit for over 20 years, scanning the sky and
+			returning data and photographs of unprecedented quality and
+			detail.</p>
+
+		<p>Indeed, the <abbr title="Hubble Space Telescope">HST</abbr> has
+			arguably done more to advance science than any device ever built.</p>
+		<hr>
+		<em id="em">
+			<h4>em</h4>
+			<h5>i与em</h5>
+			新的开发人员经常会看到产生相似结果的多个元素而感到困惑。em并且i是一个常见的示例，因为它们都使文本变为斜体。有什么不同？您应该使用哪个？
+
+			默认情况下，视觉结果是相同的。但是，语义不同。该e>元素代表其内容的压力加重，而i元素表示从正常的散文掀起的文字，这样的外来词，虚构人物的想法，或者当文本是指一个字，而不是代表其语义的定义。（作品的标题，例如书名或电影的名称，应使用cite。）
+		</em>
+		<hr>
+		<i id="i">this is text wrapped with tag:i</i>
+		<hr>
+		<kbd id="kbd">kbd represend input,mostly the keyboard.but also can voice input</kbd>
+
+		<p>Please press <kbd class="key">Ctrl</kbd> + <kbd class="key">Shift</kbd> <kbd class="key">+</kbd> <kbd
+				class="key">R</kbd> to re-render
+			an MDN page.
+		</p>
+		<hr>
+		<mark id="mark">this is marked text</mark>
+		<br></br>
+		<mark>
+			mark is high light
+		</mark>
+		<hr>
+		<ruby>
+			漢 <rt>
+			<rp>(</rp>ㄏㄢˋ<rp>)</rp>
+			</rt>
+		</ruby>
+		<p>
+			在html中，ruby标签是html5中新增的标签，是使用来定义ruby注释（中文注音或字符），如果在东亚使用，显示的是东亚字符的发音。
+
+			ruby标签通常和rt标签和rp标签一起使用，rt标签用来提供注释信息（如：拼音），rp标签用来定义浏览器不支持ruby标签时所显示的内容。
+
+		</p>
+		<hr>
+		<ruby id="ruby">
+			标
+			<rp id="rp">(</rp>
+			<rt id="rt">biao</rt>
+			<rp>)</rp>
+			签
+			<rp>(</rp>
+			<rt>qian</rt>
+			<rp>)</rp>
+		</ruby>
+		<hr>
+		<s id="s">this is s.stands for content no longer accurate or relavant.</s>
+		<hr>
+		<samp id="samp">
+			用于包围它表示从计算机程序样品（或引用）输出嵌入式文本。
+			它的内容通常使用浏览器的默认等宽字体（例如Courier或Lucida Console）呈现。
+			<u>
+				this is font wrapped tag:samp
+			</u>
+		</samp>
+		<p>
+			用于包围它表示从计算机程序样品（或引用）输出嵌入式文本。
+			它的内容通常使用浏览器的默认等宽字体（例如Courier或Lucida Console）呈现。
+			<u>
+				This is normal font.
+			</u>
+		</p>
+		<hr>
+		<small id="small">this is small font.</small>
+		<br></br>
+		<p>this is normal font.</p>
+		<br></br>
+		<samp>this is samp font</samp>
+		<hr>
+		<span id="span">
+			span should with <b>global attribute such as class,lang,dir.
+				<br></br>
+				It workds well with it's child.
+			</b>
+		</span>
+		<hr>
+		<strong id="strong">This is the content that I want to stress.<br>thats why use strong but not
+			tag:b.<br>strong has actually meanings.</strong>
+		<hr>
+		2 <sup id="sup">5</sup> = 32
+		<br>
+		log <sub id="sub">2</sub>32 = 5
+		<hr>
+		现在的时间是<time id="time" datetime="2017-07-7 16:30">2017-07-7 下午4点半</time><br />
+		这篇文章发布与<time datetime="2008-08-8 12:00" pubdate>2008年8月8日12点整</time><br>
+		attribute:<b>datetime</b> 规定日期 / 时间。否则，由元素的内容给定日期 / 时间。
+		<time> 标签定义公历的时间（24 小时制）或日期，时间和时区偏移是可选的。
+			<br></br>
+			time能够以机器可读的方式对日期和时间进行编码，这样，举例说，用户代理能够把生日提醒或排定的事件添加到用户日程表中，搜索引擎也能够生成更智能的搜索结果。
+
+			<p>
+				time标签对于布局是没有任何影响的，我们直接用一个span也一样可以实。
+			</p>
+			<p>
+				这个标签主要的主要原因就是在蜘蛛爬取的时候可以爬取到，知道这是时间，进而可以得到相关的流量。
+			</p>
+			<hr>
+			<u id="u">This is a text wrapped with tag u.</u>
+			<br></br>
+
+			<pre>
+			<code>
+			<var id="var">a</var> = 1;
+			<var>b</var> = <var>a</var>;
+			//var stands for a variable in any programing launguage.
+			</code>
+            </pre>
+			<hr>
+			<wbr id="wbr">wbr</wbr><br>
+			该HTML wbr元素代表一个字破门良机，在文本中位置的浏览器可以选择断行，但其行规则本来不会创建在该位置休息。
+			wbr and br.
+			<p>
+				html4中br表示换行，br表示必须换行。而wbr意思是在浏览器窗口或父级窗口宽度足够的情况下，不换行；在宽度不足的情况下，在加了wbr处主动换行。
+			</p>
+			<p>
+				这个wbr好像对字符型的语言用处挺大，但是对于想中文这种字，貌似没多大用处。
+			</p>
+	</main>
+	<hr>
+	<footer id="footer">
+		@Copyright 2020-10-12 by happysmile12321<br>
+		this article mostly comes from firefox development's manual
+	</footer>
+</body>
+
+</html>

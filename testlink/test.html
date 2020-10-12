@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>This is a document test link</title>
+	<link rel="stylesheet" href="a.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+	<p>it open a tcp link,</p>
+	<p>send a html get command</p>
+	<p>get /test.html</p>
+	<p>then</p>
+	<p>get /a.css</p>
+	<pre>
+	now all is http1.1
+	http1.1 is long connection
+	when tcp shakehand is done,
+	it will not close it for a long time
+	because website isn't only html
+	it has img,video,music and so on
+
+
+and tcp link is timecostly
+to reduce that,not close between b/s for a long time
+until transfor enough resource
+
+then client with cookies to get resource ,for server to 
+recognise them as their user
+	</pre>
+</body>
+
+</html>

@@ -12,10 +12,10 @@
 | 2020-10-13 | tag:embeddedcontent:                                                                  |
 | 2020-10-13 | tag:script:                                                                           |
 | 2020-10-13 | tag:demarcatingedits:                                                                 |
+| 2020-10-13 | tag:tablecontent:                                                                     |
 |            | tag:Image:                                                                            |
 |            | tag:and:                                                                              |
 |            | tag:deprecatedelements:                                                               |
 |            | tag:forms:                                                                            |
 |            | tag:interactivecontent:                                                               |
-|            | tag:tablecontent:                                                                     |
 |            | tag:webcomponents:                                                                    |

@@ -11,9 +11,9 @@
 | 2020-10-13 | tag:imageANDmultimedia:                                                               |
 | 2020-10-13 | tag:embeddedcontent:                                                                  |
 | 2020-10-13 | tag:script:                                                                           |
+| 2020-10-13 | tag:demarcatingedits:                                                                 |
 |            | tag:Image:                                                                            |
 |            | tag:and:                                                                              |
-|            | tag:demarcatingedits:                                                                 |
 |            | tag:deprecatedelements:                                                               |
 |            | tag:forms:                                                                            |
 |            | tag:interactivecontent:                                                               |

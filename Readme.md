@@ -8,7 +8,7 @@
 | 2020-10-12 | tag:content:                                                                          |
 | 2020-10-12 | tag:text:                                                                             |
 | 2020-10-13 | tag:inlinetext:                                                                       |
-|            | tag:imageANDmultimedia:                                                               |
+| 2020-10-13 | tag:imageANDmultimedia:                                                               |
 |            | tag:Image:                                                                            |
 |            | tag:and:                                                                              |
 |            | tag:demarcatingedits:                                                                 |

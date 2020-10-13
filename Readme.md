@@ -10,7 +10,7 @@
 | 2020-10-13 | tag:inlinetext:                                                                       |
 | 2020-10-13 | tag:imageANDmultimedia:                                                               |
 | 2020-10-13 | tag:embeddedcontent:                                                                  |
-|            | tag:script:                                                                           |
+| 2020-10-13 | tag:script:                                                                           |
 |            | tag:Image:                                                                            |
 |            | tag:and:                                                                              |
 |            | tag:demarcatingedits:                                                                 |

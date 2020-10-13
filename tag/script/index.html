@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>tag:Script:demo here</title>
+
+</head>
+
+<body>
+
+	<header id="header">
+		<h1>Welcome to the script tag practice place</h1>
+	</header>
+	<main id="main">
+		<h1>script tag includes:</h1>
+		<nav>
+			<ul>
+				<li>
+					<a href="#canvas" target="_self">canvas</a>
+				</li>
+				<li>
+					<a href="#noscript" target="_self">noscript</a>
+				</li>
+				<li>
+					<a href="#script" target="_self">script</a>
+				</li>
+			</ul>
+		</nav>
+		<hr>
+		<p>
+			canvas can with <b>canvas script</b> to draw picture.
+		</p>
+		<p>
+			canvas can with <b>webgl_api</b> to render animation
+		</p>
+		<canvas id="myCanvas" width="500px" height="500px" style="border:1px solid #000000;">
+			此代码段将canvas元素添加到HTML文档。如果浏览器无法渲染画布或无法读取画布，则提供备用文本。
+			An alternative text describing what your canvas displays.
+		</canvas>
+
+
+
+
+
+
+
+		<!-- This script must be placed here. -->
+		<script charset="utf-8">
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			//draw a circle
+			ctx.beginPath();
+			ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+			ctx.stroke();
+
+			//draw a rec
+			ctx.fillStyle = "#FF0000";
+			ctx.fillRect(0, 0, 150, 75);
+
+
+			//draw another circle
+			ctx.beginPath();
+			ctx.arc(180, 140, 40, 0, 2 * Math.PI);
+			ctx.stroke();
+
+
+			// 创建渐变
+			var grd = ctx.createLinearGradient(0, 0, 200, 0);
+			grd.addColorStop(0, "red");
+			grd.addColorStop(1, "white");
+
+			// 填充渐变
+			ctx.fillStyle = grd;
+			ctx.fillRect(10, 10, 150, 80);
+		</script>
+		<hr>
+		<p>
+			no script used to remind user,if user's browser doesn't support javascript.
+		</p>
+		<script type="text/javascript">
+			document.write("Hello World! written by javascript")
+		</script>
+		<noscript id="noscript">Your browser does not support JavaScript!</noscript>
+		<hr>
+		<script id="script" type="text/javascript">
+		</script>
+		<p>
+			我经常看到有的网站
+			script的type类型是application / javascript, 有的是text / javascript.而我喜欢用text /
+			javascript,或者直接不写type属性.其实text / javascript标签是比较老的写法, 标准的写法是application / javascript,
+			在HTML5标准中,不写type则默认就是ECMAScript.IE7, IE8用application / javascript会引入失败
+		</p>
+		<hr>
+	</main>
+	<hr>
+	<footer id="footer">
+		@Copyright 2020-10-12 by happysmile12321<br>
+		this article mostly comes from firefox development's manual
+	</footer>
+</body>
+
+</html>

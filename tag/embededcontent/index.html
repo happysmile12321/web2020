@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>tag:EmbededContent:demo here</title>
+</head>
+
+<body>
+
+	<header id="header">
+		<h1>Welcome to the innertext tag practice place</h1>
+	</header>
+
+
+	<main id="main">
+
+		<nav>
+			<ul type="disc">
+				<li>
+					<a href="#embed" target="_self">
+						embed
+					</a>
+				</li>
+				<li>
+					<a href="#iframe" target="_self">
+						iframe
+					</a>
+				</li>
+				<li>
+					<a href="#object" target="_self">
+						object
+					</a>
+				</li>
+				<li>
+					<a href="#param" target="_self">
+						param
+					</a>
+				</li>
+				<li>
+					<a href="#picture" target="_self">
+						picture
+					</a>
+				</li>
+				<li>
+					<a href="#source" target="_self">
+						source
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<hr>
+		<embed src="../imageAndMultimedia/img/plant1.png" id="embed"></embed>
+		<p>
+			embed can insert such as .swf video or flash or some what little appet or media.
+		</p>
+		<hr>
+		<iframe id="iframe" width="100%" height="500px" scrolling="no" src="https://www.baidu.com"
+			frameborder="0"></iframe>
+		<hr>
+		<object id="object" data="../imageAndMultimedia/img/plant1.png">
+		</object>
+		<p>
+			data: 定义引用对象数据的 URL。如果有需要对象处理的数据文件,要用 data 属性来指定这些数据文件。
+		</p>
+		<p>
+			定义被规定在 data 属性中指定的文件中出现的数据的 MIME 类型。
+		</p>
+
+		<pre>
+		<xmp>
+		定义和用法
+定义一个嵌入的对象。请使用此元素向您的 XHTML 页面添加多媒体。此元素允许您规定插入 HTML 文档中的对象的数据和参数，以及可用来显示和操作数据的代码。
+
+<object> 标签用于包含对象，比如图像、音频、视频、Java applets、ActiveX、PDF 以及 Flash。
+
+object 的初衷是取代 img 和 applet 元素。不过由于漏洞以及缺乏浏览器支持，这一点并未实现。
+
+浏览器的对象支持有赖于对象类型。不幸的是，主流浏览器都使用不同的代码来加载相同的对象类型。
+
+而幸运的是，object 对象提供了解决方案。如果未显示 object 元素，就会执行位于 <object> 和 </object> 之间的代码。通过这种方式，我们能够嵌套多个 object 元素（每个对应一个浏览器）。
+		</xmp>
+		</pre>
+		<hr>
+		<param id="param" name="" value="">
+		param 元素允许您为插入 XHTML 文档的对象规定 run-time 设置，也就是说，此标签可为包含它的 object 或者 applet 标签提供参数。
+		param is along with object.
+		<hr>
+		<xmp>
+			<object classid="clsid:F08DF954-8592-11D1-B16A-00C0F0283628" id="Slider1" width="100"
+				height="50">
+				<param name="BorderStyle" value="1" />
+				<param name="MousePointer" value="0" />
+				<param name="Enabled" value="1" />
+				<param name="Min" value="0" />
+				<param name="Max" value="10" />
+			</object>
+		</xmp>
+		<hr>
+		<picture id="picture">
+			<source id="source" srcset="img/img1.png" media="(min-width: 650px)">
+			<source srcset="img/img2.png" media="(min-width: 465px)">
+			<img src="img/img3.png">
+		</picture>
+		<p>
+			tag:Picture has sub tag:source,
+			source attr:srcset set the img source.attr:media set for adjust different device(different size
+			of screen.).If adjust that size of screen ,then will show that img.
+		</p>
+		<p>
+			if tag:source doesn't apply ,then display tag:img.
+		</p>
+	</main>
+
+	<footer id="footer">
+		@Copyright 2020-10-12 by happysmile12321<br>
+		this article mostly comes from firefox development's manual
+	</footer>
+</body>
+
+</html>

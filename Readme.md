@@ -9,13 +9,13 @@
 | 2020-10-12 | tag:text:                                                                             |
 | 2020-10-13 | tag:inlinetext:                                                                       |
 | 2020-10-13 | tag:imageANDmultimedia:                                                               |
+| 2020-10-13 | tag:embeddedcontent:                                                                  |
+|            | tag:script:                                                                           |
 |            | tag:Image:                                                                            |
 |            | tag:and:                                                                              |
 |            | tag:demarcatingedits:                                                                 |
 |            | tag:deprecatedelements:                                                               |
-|            | tag:embeddedcontent:                                                                  |
 |            | tag:forms:                                                                            |
 |            | tag:interactivecontent:                                                               |
-|            | tag:script:                                                                           |
 |            | tag:tablecontent:                                                                     |
 |            | tag:webcomponents:                                                                    |

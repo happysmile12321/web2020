@@ -8,13 +8,13 @@
 | 2020-10-12 | tag:content:                                                                          |
 | 2020-10-12 | tag:text:                                                                             |
 | 2020-10-13 | tag:inlinetext:                                                                       |
+|            | tag:imageANDmultimedia:                                                               |
+|            | tag:Image:                                                                            |
 |            | tag:and:                                                                              |
 |            | tag:demarcatingedits:                                                                 |
 |            | tag:deprecatedelements:                                                               |
 |            | tag:embeddedcontent:                                                                  |
 |            | tag:forms:                                                                            |
-|            | tag:Image:                                                                            |
-|            | tag:imageANDmultimedia:                                                               |
 |            | tag:interactivecontent:                                                               |
 |            | tag:script:                                                                           |
 |            | tag:tablecontent:                                                                     |

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>tag:ImageAndMultimedia:demo here</title>
+	<style type="text/css" media="screen">
+		hr {
+			border: 2px solid red;
+		}
+	</style>
+	<script charset="utf-8">
+		function fun1() {
+			alert("Does it beautiful?")
+		}
+	</script>
+</head>
+
+<body>
+	<header id="header">
+		<h1>Welcome to the imageAndMultimedia tag practice place</h1>
+	</header>
+	<main id="main">
+		<h1>imageAndMultimedia tag includes:</h1>
+		<ul type="square">
+			<li><a href="#map">map</a></li>
+			<li><a href="#area">area</a></li>
+			<li><a href="#audio">audio</a></li>
+			<li><a href="#img">img</a></li>
+			<li><a href="#video">video</a></li>
+		</ul>
+		<hr>
+		<p>
+			tag:map and tag:area is always together.Here are examples.
+		</p>
+		<p>
+			you cound click one of them.And it jump to another html file.
+		</p>
+		<p>
+			the tag:area is cordinate in tag:map.
+		</p>
+		<hr>
+		<img src="img/plants.jpeg" alt="plants" usemap="#plantmap">
+		<map id="map" name="plantmap">
+			<area shape="rect" coords="40,50,128,108" href="plant1.html" alt="plants">
+			<!--99,109-->
+		</map>
+
+		<br>
+		map attribute:name is linked to
+		<br>
+		1、距形：(左上角顶点坐标为(x1,y1)，右下角顶点坐标为(x2,y2))
+		<br>
+		&lt;area shape="rect" coords="x1,y1,x2,y2" href=url&gt;
+		<br>
+		2、圆形：(圆心坐标为(X1,y1)，半径为r)
+		&lt;area shape="circle" coords="x1,x2,r" href="url" alt=""&gt;
+		<br>
+		3、多边形：(各顶点坐标依次为(x1,y1)、(x2,y2)、(x3,y3) ......)
+		&lt;area shape="poly" coords=x1,y1,x2,y2"" href="url" alt=""&gt;
+		<br>
+		<hr>
+		<audio id="audio" controls loop src="./mp3/bgm.mp3">
+			Your browser don't support html5 tag:audio.
+		</audio>
+		<!--
+		<audio id="audio" controls autoplay loop src="./mp3/bgm.mp3" preload="auto">
+			Your browser don't support html5 tag:audio.
+		</audio>
+		-->
+		<hr>
+		<img id="img" onclick="fun1()" src="img/plants.jpeg" alt="picture plants missing here">
+		<hr>
+		<hr>
+		<video id="video" src="" height="" width="" controls preload="none" autoplay="autoplay"></video>
+		<hr>
+	</main>
+	<footer id=" footer">
+		@Copyright 2020-10-12 by happysmile12321<br>
+		this article mostly comes from firefox development's manual
+	</footer>
+</body>
+
+</html>

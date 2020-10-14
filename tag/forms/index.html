@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>tag:Forms:demo here</title>
+	<script charset="utf-8" type="application/javascript">
+		function btn() {
+			alert("I am a button")
+		}
+	</script>
+</head>
+
+<body>
+
+	<header id="header">
+		<h1>Welcome to the content forms practice place</h1>
+	</header>
+	<main id="main">
+		<h1>forms tag includes:</h1>
+		<ul type="square">
+			<li><a href="#button">button</a></li>
+			<li><a href="#ice-cream-flavors">datalist</a></li>
+			<li><a href="#option">option</a></li>
+			<li><a href="#ice-cream-flavors2">select</a></li>
+			<li><a href="#fieldset">fieldset</a></li>
+			<li><a href="#legend">legend</a></li>
+			<li><a href="#input">input</a></li>
+			<li><a href="#label">label</a></li>
+			<li><a href="#form">form</a></li>
+			<li><a href="#meter">meter</a></li>
+			<li><a href="#optgroup">optgroup</a></li>
+			<li><a href="#output">output</a></li>
+			<li><a href="#progress">progress</a></li>
+			<li><a href="#textarea">textarea</a></li>
+		</ul>
+		<hr>
+		<hr>
+		<label for="ice-cream-choice">Choose a flavor:</label>
+		<input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+
+		<form id="form" action="#baidu.com" method="get" accept-charset="utf-8">
+			<datalist id="ice-cream-flavors">
+				<option value="Chocolate">
+				<option value="Coconut">
+				<option value="Mint">
+				<option value="Strawberry">
+				<option value="Vanilla">
+			</datalist>
+			<br></br>
+			<select id="ice-cream-flavors2">
+				<option value="Chocolate">Chocolate</option>
+				<option value="Coconut">Coconut</option>
+				<option value="Mint">Mint</option>
+				<option value="Strawberry">Strawberry</option>
+				<option value="Vanilla">Vanilla</option>
+			</select>
+			<hr>
+			<fieldset id="fieldset">
+				<legend id="legend">Choose your favorite monster</legend>
+
+				<input type="radio" id="kraken" name="monster">
+				<label for="kraken">Kraken</label><br />
+
+				<input type="radio" id="sasquatch" name="monster">
+				<label for="sasquatch">Sasquatch</label><br />
+
+				<input type="radio" id="mothman" name="monster">
+				<label for="mothman">Mothman</label>
+
+			</fieldset>
+			<button onclick="btn()" type="submit" id="button">Click to submit</button>
+
+			<br></br>
+			<label for="fuel">Fuel level:</label>
+			<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
+				at 50/100
+			</meter>
+			<hr>
+			<label for="dino-select">Choose a dinosaur:</label>
+			<select id="dino-select">
+				<optgroup label="Theropods">
+					<option>Tyrannosaurus</option>
+					<option>Velociraptor</option>
+					<option>Deinonychus</option>
+				</optgroup>
+				<optgroup label="Sauropods">
+					<option>Diplodocus</option>
+					<option>Saltasaurus</option>
+					<option>Apatosaurus</option>
+				</optgroup>
+			</select>
+		</form>
+
+		<hr>
+		<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+			<input type="range" id="b" name="b" value="50" /> +
+			<input type="number" id="a" name="a" value="10" /> =
+			<output name="result" id="output" for="a b">60</output>
+		</form>
+		<progress id="progress"></progress>
+		<hr>
+		<textarea id="textarea" name="Name" rows="8" cols="40" style="border: 1px solid red;"
+			readonly></textarea>
+		<hr>
+	</main>
+	<hr>
+	<footer id="footer">
+		@Copyright 2020-10-12 by happysmile12321<br>
+		this article mostly comes from firefox development's manual
+	</footer>
+</body>
+
+</html>

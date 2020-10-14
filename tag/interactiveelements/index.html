@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>tag:interactiveelements:demo here</title>
+	<style type="text/css" media="screen">
+		div {
+			width: 300px;
+			height: 80px;
+			background-color: lightgreen;
+		}
+	</style>
+</head>
+
+<body>
+
+	<header id="header">
+		<h1>Welcome to the interactiveelements tag practice place</h1>
+	</header>
+	<main id="main">
+		<h1>interactiveelements tag includes:</h1>
+		<ul type="circle">
+			<li><a href="#details">details</a></li>
+			<li><a href="#summary">summary</a></li>
+			<li><a href="#dialog">dialog</a></li>
+			<li><a href="#menu">menu</a></li>
+		</ul>
+		<hr>
+		<details id="details">
+			<summary id="summary">
+				NEED to Notice
+			</summary>
+			this is more information
+		</details>
+		<hr>
+		<dialog open>
+			<p>hello</p>
+		</dialog>
+		<hr>
+		<div contextmenu="popup-menu">
+			Right-click to see the adjusted context menu
+		</div>
+		<!--a lot of browser don't support this tag-->
+		<menu type="context" id="popup-menu">
+			<menuitem>Action</menuitem>
+			<menuitem>Another action</menuitem>
+			<hr />
+			<menuitem>Separated action</menuitem>
+		</menu>
+
+		<hr>
+	</main>
+	<hr>
+	<footer id="footer">
+		@Copyright 2020-10-12 by happysmile12321<br>
+		this article mostly comes from firefox development's manual
+	</footer>
+</body>
+
+</html>

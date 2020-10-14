@@ -14,6 +14,6 @@
 | 2020-10-13 | tag:demarcatingedits:                                                                 |
 | 2020-10-13 | tag:tablecontent:                                                                     |
 | 2020-10-14 | tag:forms:                                                                            |
-|            | tag:interactivecontent:                                                               |
+| 2020-10-14 | tag:interactivecontent:                                                               |
 |            | tag:webcomponents:                                                                    |
 |            | tag:deprecatedelements:                                                               |

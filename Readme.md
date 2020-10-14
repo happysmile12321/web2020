@@ -16,4 +16,4 @@
 | 2020-10-14 | tag:forms:                                                                            |
 | 2020-10-14 | tag:interactivecontent:                                                               |
 | 2020-10-14 | tag:webcomponents:                                                                    |
-|            | tag:deprecatedelements:                                                               |
+| 2020-10-14 | tag:deprecatedelements:                                                               |

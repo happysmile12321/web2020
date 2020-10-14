@@ -15,5 +15,5 @@
 | 2020-10-13 | tag:tablecontent:                                                                     |
 | 2020-10-14 | tag:forms:                                                                            |
 | 2020-10-14 | tag:interactivecontent:                                                               |
-|            | tag:webcomponents:                                                                    |
+| 2020-10-14 | tag:webcomponents:                                                                    |
 |            | tag:deprecatedelements:                                                               |

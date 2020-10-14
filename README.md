@@ -1,2 +1,3 @@
-# web2020
-This is what I start to learn web.
+| time       | what                                        |
+|------------|---------------------------------------------|
+| 2020-10-14 | basic css information,make a study rode map |

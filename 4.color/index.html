@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>test css color</title>
+	<style type="text/css" media="screen">
+		html,
+		body {
+			height: 100%;
+		}
+
+		body {
+			background-color: black;
+		}
+
+		.containner_div {
+			margin-left: auto;
+			margin-right: auto;
+			padding: 8px;
+			/**
+			background-color: rgba(220, 12, 230, 0.5);
+			**/
+			/**
+			background-color: hsl(200, 100%, 50%);
+			**/
+			background-color: hsl(277, 90%, 77%);
+			border: 1px solid red;
+			text-align: left;
+			width: 90%;
+			height: 600px;
+		}
+
+		.test {
+			background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1602925565189&di=c3dc529cb9b8f2036f5cd54b65289fb1&imgtype=0&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F359b033b5bb5c9ea3dee19add539b6003af3b35a.jpg');
+			height: 100%;
+			/**background-repeat: repeat-y;**/
+			background-repeat: no-repeat;
+			/**background-position: center bottom;**/
+
+			/**right and top**/
+			background-attachment: scroll;
+			background-position: 100% 0%;
+			background-size: 90px;
+
+
+
+
+		}
+	</style>
+
+</head>
+
+<body>
+
+
+	<div class="container">
+		<div class="containner_div">
+			<p class="test">
+				This is a test paragragh
+			</p>
+		</div>
+	</div>
+
+
+
+
+</body>
+
+</html>

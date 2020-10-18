@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>多重样式表</title>
+	<style type="text/css" media="screen">
+		#p {
+			margin-right: 1px;
+			border: 1px solid red;
+		}
+
+		.p {
+			background-color: plum;
+			margin-right: 400px;
+			border: 10px solid blue;
+		}
+
+		* {
+			margin-right: 10px;
+		}
+	</style>
+</head>
+
+<body>
+
+
+
+
+	<p class="p" id="p">
+		如果，1个元素，被引用了多次。(引用可以是外部引用、内部引用、内联样式),那么会遵循详细优先的原则。即是样式越详细的，属性越多的，就用哪个。
+		在这个例子中，我要进行3次引用,看哪个可以被我引用上。
+	</p>
+
+</body>
+
+</html>
